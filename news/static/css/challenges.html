@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <script type="text/javascript">
+            /* Challenge 1 = Return sum of two numbers
+           function addNumbers(a,b){
+                 sum = a + b;
+                 return sum;
+           }
+           document.write(addNumbers(24,50));*/
+
+           /* challege 2 Convert seconds to minute
+           function minToSec(a){
+                 seconds = a * 60;
+                 secValue = document.write(seconds + 'seconds!')
+                 return secValue
+           }
+           minToSec(10);
+           minToSec(2);*/
+
+           /*function nextNumber(a){
+                 for(var x=a;x<a+2;x++){
+                       switch (x){
+                             case a:
+                             continue
+
+                             case !a:
+                             document.write('Next Number is '+ x);
+                       }
+                 }
+           }
+           nextNumber(2)*/
+
+          /* var house = {
+                 rooms : 6,
+                 tenants : 20,
+                 location : 'kumasi',
+
+                 occupancy : function(){
+                       return this.tenants / this.rooms 
+                 }
+           }
+           document.write(house.rooms)
+           //document.write(house.occupancy())*/
+
+          /* var house = new Object();
+
+           house.rooms = 6;
+           house.tenants = 20;
+           house.location = 'kumasi';
+
+           house.occupancy = function(){
+                 return this.tenants / this.rooms;
+           }
+           document.write(house.rooms)*/
+
+           function house(rooms, tenants, location){
+                 this.rooms = rooms;
+                 this.tenants = tenants;
+                 this.location = location;
+
+                 this.occupancy = function(){
+                       return this.tenants / this.rooms;
+
+           }
+           var firstHouse = new house(6, 20, 'kumasi')
+           var secondHouse = new house(10, 60, 'Accra')
+      
+            </script>
+      </head>
+      <body><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eos placeat ipsum aliquam cupiditate magni veritatis sapiente atque enim. At quaerat non, perferendis consequuntur necessitatibus dolorem magnam ea cumque tenetur.</p></body>
+</html>

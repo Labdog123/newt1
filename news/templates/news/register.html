@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Register</title>
+            <link rel="stylesheet" href="{% static 'css/register.css' %}" type="text/css">
+      </head>
+
+      <body>
+        {% include 'news/navbar_trial.html' %}
+            <form action="" method="POST">
+                  {% csrf_token %}
+                  <h2>Please Sign Up here</h2><br><hr><br>
+                  <p>
+                        <label>First Name</label><br>
+                        {{form.first_name}}<br><br>
+                  </p>
+                  <p>
+                        <label>Last Name</label><br>
+                         {{form.last_name}}<br><br>
+                  </p>
+                  <p>
+                        <label>Username</label><br>
+                        {{form.username}}<br><br>
+                  </p>
+                  <p>
+                        <label>Email</label><br>
+                         {{form.email}}<br><br>
+                  </p>
+                  <p>
+                        <label>Password</label><br>
+                         {{form.password1}}<br><br>
+                  </p>
+                  <p>
+                        <label>Repeat Password</label><br>
+                         {{form.password2}}</p><br>
+                  <button type="submit" class="signup-button">Register</button><br><br>
+                  <p class="reg-b-text">Already have an account? <a href="{% url 'login' %}">Login here</a></p><br><hr>
+            </form>
+      <script src="{% static 'js/register.js' %}"></script>
+      </body>
+</html>
