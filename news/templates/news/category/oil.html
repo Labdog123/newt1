@@ -1,0 +1,31 @@
+{% extends 'news/base1.html'%}
+{% block content %}
+ <div class="showcase">
+                  {% for item in post %}
+                <div class="item1">
+                        <img class="post-pic" src="
+                        {% if item.post_image %}
+                        {{item.post_image.url}}
+                         {% endif %}">
+                  </div>
+                  <div class="item2">
+                      <a href="{{item.get_absolute_url}}" class="story-heading">{{item.title}}</a>
+                      {{ item.body|truncatewords:30|linebreaks }}
+                        <p class="date">
+                        Published {{ item.date_published }} by {{ item.author }}
+                  </p>
+                  <div class="tags-main">
+                        <p>Tags: </p>
+                        <ul class="tags">
+                              <li>{{item.category}}</li>
+                        </ul>
+                  </div>
+                  <span><button type="button" class="rm-button"><a href="{{item.get_absolute_url}}">
+                        Read more
+                  </button>
+                  </a></span>
+                  </div>
+                  {% endfor %}
+            </div>
+
+{% endblock %}

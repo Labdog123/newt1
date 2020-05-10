@@ -1,0 +1,22 @@
+{% extends 'news/base1.html' %}
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+
+
+        <p>{{form.title}}</p>
+
+        <p>{{form.body}}</p>
+
+        <p>{{form.author}}</p>
+        <p>{{form.date_published}}</p>
+        <p>{{form.post_image}}</p>
+
+        <p>{{form.category}}</p>
+
+        <p>{{form.status}}</p>
+
+    <button type="submit" class="create-button">Publish</button><br><br><br><br><br><br><br><br><br><br><br><br>
+</form>
+
+{% endblock %}
